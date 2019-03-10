@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<View fx:id="primaryChild" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" stylesheets="@primaryChild.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.PrimaryChildPresenter">
+   <center>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField id="itemCode" fx:id="readProductCode" alignment="CENTER" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Enter item code" GridPane.columnIndex="3" GridPane.columnSpan="3" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enterItemButton" text="Enter" GridPane.columnIndex="6">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="voidButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#voidItemButton" text="Void" GridPane.columnIndex="7" />
+            <ToggleButton fx:id="M" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processCategoryChar" text="M" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="categoryCharGroup" />
+               </toggleGroup></ToggleButton>
+            <ToggleButton fx:id="W" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processCategoryChar" text="W" toggleGroup="$categoryCharGroup" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="K" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processCategoryChar" text="K" toggleGroup="$categoryCharGroup" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ToggleButton fx:id="O" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processCategoryChar" text="O" toggleGroup="$categoryCharGroup" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button fx:id="fiveCash" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quickCashFive" text="€5" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button fx:id="tenCash" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quickCashTen" text="€10" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button fx:id="twentyCash" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quickCashTwenty" text="€20" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button fx:id="fiftyCash" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quickCashFifty" text="€50" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button fx:id="chargeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chargeSalesButton" text="Charge" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <Button fx:id="digit9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="9" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="digit8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="8" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="digit7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="7" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="digit6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="6" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button fx:id="digit5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="5" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="digit4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="4" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="digit3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="3" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button fx:id="digit2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="2" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="digit1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="1" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearDigitsButton" text="Clear" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Button fx:id="digit0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigits" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="amountTenderedLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Amount Tendered" />
+                  <Label id="amountTendered" fx:id="amountTenderedDigits" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <graphic>
+                        <Icon content="EURO_SYMBOL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Icon>
+                     </graphic>
+                  </Label>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowSpan="6">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label id="totalLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Total:" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label id="totalDigits" fx:id="totalSalesLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <graphic>
+                              <Icon content="EURO_SYMBOL" />
+                           </graphic>
+                        </Label>
+                        <ListView id="salesList" fx:id="currentSalesListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnSpan="4" GridPane.rowSpan="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </center>
+</View>

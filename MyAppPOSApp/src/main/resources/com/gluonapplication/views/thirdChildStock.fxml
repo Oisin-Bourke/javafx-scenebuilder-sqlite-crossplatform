@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<View fx:id="thirdChildStock" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" stylesheets="@thirdChildStock.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.ThirdChildStockPresenter">
+   <center>
+      <AnchorPane>
+         <children>
+            <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="idCol" editable="false" prefWidth="40.0" text="ID" />
+                      <TableColumn fx:id="date_stampCol" editable="false" text=" Date Time Added" />
+                        <TableColumn fx:id="categoryCol" editable="false" prefWidth="60.0" text="Category " />
+                        <TableColumn fx:id="typeCol" editable="false" prefWidth="60.0" text="Type" />
+                        <TableColumn fx:id="conditionCol" editable="false" prefWidth="60.0" text="Condition" />
+                        <TableColumn fx:id="brandCol" editable="false" prefWidth="60.0" text="Brand" />
+                        <TableColumn fx:id="sizeCol" editable="false" prefWidth="60.0" text="Size" />
+                        <TableColumn fx:id="priceCol" editable="false" prefWidth="60.0" text="Price" />
+                        <TableColumn fx:id="codeCol" editable="false" text="Item Code" />
+                    </columns>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TableView>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+</View>

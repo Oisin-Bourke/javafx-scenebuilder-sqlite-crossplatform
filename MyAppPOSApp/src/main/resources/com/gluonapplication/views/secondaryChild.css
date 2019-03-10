@@ -1,0 +1,45 @@
+.view {
+
+}
+
+.toggle-button {
+    -fx-background-radius: 5;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #ffa500;
+}
+
+.toggle-button:selected{
+    -fx-background-color: #ffa500;
+}
+
+.toggle-button:selected:hover{
+    -fx-background-color: #ffa500;
+}
+
+#stockItemGrid {
+    -fx-background-color: #fafafa;
+    -fx-background-radius: 5;
+    -fx-border-width: 2;
+    -fx-border-color: #f6f6f6;
+    -fx-border-radius: 5;
+}
+
+#stockItemHeader {
+    -fx-background-color: #f6f6f6;
+    -fx-font-weight: bold;
+}
+
+#stockPrice {
+    -fx-background-color: white;
+    -fx-background-radius: 3;
+    -fx-font-weight: bold;
+}
+
+#labelItem {
+
+
+}
+
+

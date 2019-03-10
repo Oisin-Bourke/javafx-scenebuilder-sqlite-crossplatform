@@ -1,0 +1,33 @@
+.view {
+
+}
+
+#itemCode{
+    -fx-font-size: 16px;
+
+}
+
+#amountTendered{
+    -fx-font-size: 28px;
+}
+
+
+
+#salesList{
+
+
+}
+
+#totalLabel {
+    -fx-font-size: 16px;
+    -fx-background-color: #009688;
+    -fx-text-fill: #fafafa;
+}
+
+#totalDigits{
+    -fx-font-size: 16px;
+    -fx-background-color: #009688;
+    -fx-text-fill: #fafafa;
+
+}
+

@@ -1,0 +1,11 @@
+.root {
+
+}
+
+.button {
+    -fx-background-radius: 5;
+}
+
+.toggle-button {
+    -fx-background-radius: 5;
+}
